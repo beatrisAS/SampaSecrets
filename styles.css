@@ -1,0 +1,514 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap');
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: var(--body-bg);
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cores para modo claro */
+
+:root {
+    --header-bg: #1E3A5F; 
+    --body-bg: #FAFAFA;
+    --text-color: #EAEAEA; 
+    --hover-color-header: #121212;
+    --hover-color-body: #1E3A5F;
+    --border-color: #CCCCCC; 
+    --scroll-bg: #E0E0E0; 
+    --scroll-thumb: #1E3A5F; 
+}
+
+/* Cores para o modo escuro */
+body.dark {
+    --header-bg: #333333;
+    --body-bg: #121212;
+    --text-color-dark: #EAEAEA;
+    --hover-color: #121212; 
+    --border-color: #555555; 
+    --scroll-bg: #121212;
+    --scroll-thumb: #333333;
+}
+
+/* Borda no cover */
+#cover {
+    border: 3px solid var(--border-color);
+    border-radius: 15px;
+    overflow: hidden;
+}
+/* Estilo do vídeo de cover */
+#cover{
+    border: var(--scroll-bg);
+}
+#cover-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.5);
+}
+
+/* Texto do cover */
+#cover h2 {
+    font-size: 4rem; 
+    color: #FFFFFF;
+    text-shadow: 0px 0px 20px #00FFFF, 0px 0px 30px #00FFFF, 0px 0px 40px #00FFFF;
+    margin-bottom: 50px;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* A imagem do scroll-down */
+.scroll-down {
+    display: block; 
+    margin: 20px auto;
+    width: 70px; 
+    animation: bounce 1.5s infinite;
+ 
+}
+
+/* Efeito de pulo para a imagem */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+/* Responsividade para o texto e seta no cover */
+@media (max-width: 768px) {
+    #cover h2 {
+        font-size: 2rem;
+    }
+
+    #scroll-down {
+        font-size: 2.5rem;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    border-bottom: 3px solid var(--border-color);
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-left: 0;
+}
+
+/* Logo e título */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 70px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--body-bg);
+    font-weight: bold;
+    transition: color 0.3s;
+    margin-left: 15px;
+}
+
+nav ul li a:hover {
+    color: var(  --hover-color-header);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Estilização do vídeo e texto do cover */
+#cover {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#cover-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.6);
+}
+
+#cover h2 {
+    font-size: 3rem;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#scroll-down {
+    margin-top: 40px;
+    font-size: 3rem;
+    color: var(--text-color);
+    animation: bounce 2s infinite;
+    text-decoration: none;
+}
+
+/* Animação para a seta */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+}
+
+.atrativos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.atrativos-container h1 {
+    text-align: left;
+    margin-right: 1170px;
+}
+
+
+.atrativo-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.atrativo {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.2s;
+}
+
+.atrativo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+    .atrativo {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .atrativo {
+        width: 100%;
+    }
+}
+
+.atrativo:hover {
+    transform: scale(1.05);
+    color: var(--header-bg);
+}
+
+
+body.dark .atrativo, body.dark .agenda-container, body.dark .comentarios-container{
+    color: var(--text-color);
+}
+body.dark .atrativo:hover{
+    color: var( --hover-color-body);
+}
+
+body.dark .atrativos-container h1 {
+   color: var(--text-color);
+}
+
+/* Classe para o efeito de aparecer/desaparecer */
+.fade-in-out {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-in-out.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.agenda-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.agenda-container h1 {
+    text-align: left;
+    margin-right: 100px;
+}
+
+.agenda-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.agenda-container li {
+    flex: 1 1 30%;
+    border: 1px solid #ddd;
+    list-style: none;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.agenda-container,
+.comentarios-container {
+    padding: 20px;
+}
+
+.comentarios-container .comentario {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 20px;
+}
+
+
+.theme-switcher {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.theme-switcher:hover {
+    color: var(--highlight-color);
+}
+
+
+/* Estilo do scroll */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scroll-thumb);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-bg);
+    border-radius: 6px;
+}
+   /* Estilo do botão de rolagem */
+   #scroll-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color:var(--scroll-thumb);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#scroll-button:hover {
+    background-color: var(--scroll-thumb);
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    #cover h2 {
+        font-size: 2rem;
+    }
+
+    #scroll-down {
+        font-size: 2rem;
+    }
+}
+
+/* Responsivo: Menu lateral para dispositivos móveis */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--header-bg);
+    color: var(--body-bg);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 200px;
+        height: 100vh;
+        transition: transform 0.3s ease;
+        transform: translateX(-100%);
+    }
+
+    /* Quando a classe active é adicionada, o menu aparece */
+    nav ul.active {
+        transform: translateX(0); 
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        margin-left: 100px;
+        color: var(--text-color);
+        z-index: 1001;
+    }
+}
+
+    .menu a {
+        text-decoration: none;
+        color: var(--text-color);
+        transition: color 0.3s ease;
+
+    }
+    .menu.active {
+        animation: slideIn 0.5s ease forwards; 
+    }
+@media (min-width: 600px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex: 1 1 calc(25% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Responsivo: Cards para dispositivos móveis */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        padding: 10px; 
+    }
+
+    .card-text {
+        font-size: 1rem; 
+        white-space: normal;
+        word-wrap: break-word; 
+    }
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    text-align: center;
+    border-top: 3px solid var(--border-color);
+}
+.footer-text{
+    color: var(--text-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: var(--body-bg);
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.social-links a:hover {
+    color: var(--highlight-color);
+}
+
+/* Estilo dos ícones de redes sociais no Light Mode (padrão) */
+.social-links img {
+    width: 40px;
+    color: var(--body-bg);
+    transition: filter 0.3s ease;
+}
+
+/* Hover dos ícones no Light Mode */
+.social-button:hover .social-icon {
+    filter: invert(80%) sepia(10%) saturate(2000%) hue-rotate(180deg) brightness(90%) contrast(100%);
+}
+
+/* Estilo dos ícones de redes sociais no Dark Mode */
+body.dark .social-links img {
+    filter: invert(0%); 
+}
+
+/* Hover dos ícones no Dark Mode */
+body.dark .social-button:hover .social-icon {
+    filter: invert(80%) sepia(10%) saturate(2000%) hue-rotate(180deg) brightness(90%) contrast(100%);
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SampaSecrets</title>
+    <link rel="icon" href="src/logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="header">
+        <div class="logo-container">
+            <img src="src/logo.png" alt="Logo do Site" class="logo">
+            <span class="site-title"><b>SampaSecrets - São Paulo como você nunca viu!</b></span>
+        </div>
+        <nav>
+            <ul class="menu" id="menu">
+               <li><a href="#atrativos-container">Atrativos</a></li>
+               <li><a href="#agenda-container">Agenda</a></li>
+               <li><a href="#comentarios-container">Depoimentos</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+        </nav>
+        <div class="theme-switcher" id="theme-switcher">💡</div>
+    </header>
+    <div id="cover" class="cover-container">
+        <video autoplay loop muted id="cover-video">
+            <source src="src/cover.mp4" type="video/mp4">
+        </video>
+        <h2>Bem-vindo a SampaSecrets!</h2>
+       <a  href="#atrativos-container"><img src="src/scroll-down.png" class="scroll-down"></a>
+    </div>
+    <main>
+        <section id="atrativos-container" class="atrativos-container fade-in-out">
+            <h1>Onde Visitar</h1>
+            <div class="atrativo-card">
+                <div class="atrativo fade-in-out">
+                    <h2>São Paulo Alternativa</h2>
+                    <img src="src/bairros.jpg" class="w3-hover-opacity" alt="São Paulo Alternativa">
+                    <p>Explore os bairros da Vila Olímpia, Vila Madalena, Bixiga e Pinheiros em um tour alternativo pelos melhores pontos de arte urbana e cultura local.</p>
+                </div>
+                <div class="atrativo fade-in-out">
+                    <h2>Sabores de Sampa</h2>
+                    <img src="src/gastronomia.jpg" class="w3-hover-opacity" alt="Sabores de Sampa">
+                    <p>Um passeio gastronômico pela diversidade culinária de São Paulo, incluindo botecos tradicionais e mercados icônicos.</p>
+                </div>
+                <div class="atrativo fade-in-out">
+                    <h2>São Paulo Noturna</h2>
+                    <img src="src/vida-noturna.jpg" class="w3-hover-opacity" alt="São Paulo Noturna">
+                    <p>Experiência noturna pelos bares, rooftops e baladas exclusivas da cidade, com uma visão sobre a vida boêmia paulistana.</p>
+                </div>
+            </div>
+            <div class="atrativo-card">
+                <div class="atrativo fade-in-out">
+                    <h2>Tour Histórias Ocultas</h2>
+                    <img src="src/historia.jpg" class="w3-hover-opacity" alt="Tour Histórias Ocultas">
+                    <p>Explore os mistérios e lendas urbanas de São Paulo, conhecendo a história por trás de locais como o Edifício Martinelli e o Viaduto do Chá.</p>
+                </div>
+                <div class="atrativo fade-in-out">
+                    <h2>Bike Tour Verde</h2>
+                    <img src="src/ibirapuera.jpg" class="w3-hover-opacity" alt="Bike Tour Verde">
+                    <p>Pedale pelos parques e áreas verdes da cidade, como o Parque Ibirapuera, em um passeio ecológico e sustentável.</p>
+                </div>
+                <div class="atrativo fade-in-out">
+                    <h2>Grafite & Arte Urbana</h2>
+                    <img src="src/beco do batman.jpg" class="w3-hover-opacity" alt="Grafite & Arte Urbana">
+                    <p>Conheça o grafite e a arte de rua de São Paulo, passando por murais icônicos no Beco do Batman e Minhocão.</p>
+                </div>
+            </div>
+        </section>
+        <section id="agenda-container" class="agenda-container fade-in-out">
+            <h1>Agenda Cultural e Eventos</h1>
+            <ul>
+                <li>Exposição no MASP - <strong>15 de novembro</strong></li>
+                <li>Show de Jazz no Centro Cultural - <strong>20 de novembro</strong></li>
+                <li>Feira de Antiguidades - <strong>25 de novembro</strong></li>
+            </ul>
+        </section>
+        <section id="comentarios-container" class="comentarios-container fade-in-out">
+            <h1>Depoimentos</h1>
+            <div class="comentarios fade-in-out">
+                <div class="comentario">
+                    <p>“São Paulo é incrível! Adorei o roteiro gastronômico.” – <strong>Mariana R.</strong></p>
+                </div>
+                <div class="comentario">
+                    <p>“A arte urbana da cidade é única. Recomendo o Beco do Batman!” – <strong>Pedro S.</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<!-- Rodapé -->
+<footer>
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61561585338009&locale=pt_BR" class="social-button">
+                <img src="src/facebook.svg" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://github.com/beatrisAS" class="social-button">
+                <img src="src/github.svg" alt="Github" class="social-icon">
+            </a> 
+            <a href="https://www.instagram.com/beatrissilvaantunes" class="social-button">
+                <img src="src/instagram.svg" alt="Instagram" class="social-icon">
+            </a>
+        </div>
+        <p class="footer-text">Desenvolvido por Beatris Antunes Silva - 2024</p>
+    </div>
+</footer>
+</html>
